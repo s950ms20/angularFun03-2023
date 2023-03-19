@@ -1,0 +1,25 @@
+<div class="single-user-grid">
+    <div class="userInfo">
+        <div class="field-description">Name:</div>
+        <div class="field-data">
+            {{ userData.name }}
+        </div>
+        <div class="field-description">User name:</div>
+        <div class="field-data">
+            {{ userData.username }}
+        </div>
+        <div class="field-description">Email:</div>
+        <div class="field-data">
+            {{ userData.email }}
+        </div>
+        <div class="field-description">Address:</div>
+        <div class="field-data">
+            {{ userData.address.street }}, {{ userData.address.suite }}, {{ userData.address.city }}, {{ userData.address.zipcode }}
+        </div>
+    </div>
+    <div class="button-area">
+        <a [routerLink]="['/user']" [queryParams]="{ id: userData.id }">
+            <button class="more-info-button">More Info</button>
+        </a>
+    </div>
+</div>

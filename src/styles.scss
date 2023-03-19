@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&display=swap");
+body {
+    background-color: rgb(56, 63, 71);
+    color: rgba(255, 255, 255, 0.516);
+    font-family: "Noto Sans Mono", monospace;
+}
+
+.main-box {
+    display: grid;
+}
+
+.about-box {
+    grid-template-columns: 1fr;
+    p {
+        text-align: justify;
+    }
+}
+
+.nav-box {
+    display: flex;
+    @media screen and (min-width: 651px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.hamburgerMenu {
+    display: flex;
+    position: relative;
+}
+
+.menuStripe {
+    align-self: flex-end;
+    margin: 1px;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.553);
+    width: 40px;
+    height: 4px;
+    border: 1px solid black;
+}
+
+.users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and (min-width: 1075px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 1650px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.box {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.151);
+    background-color: rgba(56, 48, 100, 0.079);
+}
+
+.single-user-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.userInfo {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.field-description,
+.field-data {
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.584);
+    color: rgba(255, 255, 255, 0.737);
+    border: 1px solid rgba(255, 255, 255, 0.299);
+    border-radius: 5%;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.222);
+    border: 1px solid black;
+    color: rgba(255, 255, 255, 0.737);
+}
+
+.button-area {
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-top: 10px;
+    button {
+        justify-self: end;
+        align-self: end;
+    }
+}

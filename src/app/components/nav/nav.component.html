@@ -1,0 +1,14 @@
+<nav class="box">
+    <div class="hamburgerMenu" *ngIf="menuData.innerWidth < 651" class="nav-box">
+        <div class="menuStripe" *ngFor="let stripe of createMenu" (click)="hideMenu(); rotate()" [@rotatedState]="state"></div>
+    </div>
+    <div *ngIf="menuData.showMenu">
+        <ul class="nav-box">
+            <li *ngFor="let route of filteredRotes">
+                <button routerLink="{{ route.path }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ route.path === "" ? "About" : (route.path | titlecase) }}
+        </button>
+            </li>
+        </ul>
+    </div>
+</nav>

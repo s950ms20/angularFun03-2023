@@ -1,0 +1,43 @@
+<div class="main-box">
+    <div class="box">
+        <div class="single-user-grid">
+            <div class="userInfo">
+                <div class="field-description">Name:</div>
+                <div class="field-data">
+                    {{ userData.name }}
+                </div>
+                <div class="field-description">User name:</div>
+                <div class="field-data">
+                    {{ userData.username }}
+                </div>
+                <div class="field-description">Email:</div>
+                <div class="field-data">
+                    {{ userData.email }}
+                </div>
+                <div class="field-description">Address:</div>
+                <div class="field-data">
+                    {{ userData.address.street }}, {{ userData.address.suite }}, {{ userData.address.city }}, {{ userData.address.zipcode }}
+                </div>
+                <div class="field-description">Phone:</div>
+                <div class="field-data">
+                    {{ userData.phone }}
+                </div>
+                <div class="field-description">Company:</div>
+                <div class="field-data">
+                    {{ userData.company.name }}
+                </div>
+                <div class="field-description">Catch Pharse:</div>
+                <div class="field-data">
+                    {{ userData.company.catchPhrase }}
+                </div>
+                <div class="field-description">Info:</div>
+                <div class="field-data">
+                    {{ userData.company.bs }}
+                </div>
+            </div>
+            <div class="button-area">
+                <button (click)="goBack()" class="more-info-button">Go Back</button>
+            </div>
+        </div>
+    </div>
+</div>
