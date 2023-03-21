@@ -39,17 +39,20 @@ body {
     }
 }
 
-.hamburgerMenu {
+.menuBtn {
     display: flex;
-    position: relative;
+    justify-content: right;
+}
+
+.hamburgerMenu {
+    display: inline-block;
 }
 
 .menuStripe {
-    align-self: flex-end;
     margin: 1px;
     padding: 3px;
     background-color: rgba(255, 255, 255, 0.553);
-    width: 40px;
+    width: 30px;
     height: 4px;
     border: 1px solid black;
 }
