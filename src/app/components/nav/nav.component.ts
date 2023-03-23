@@ -1,6 +1,6 @@
 import { MenuService, MenuData } from './../../services/menu.service';
 import { routes } from './../../app-routing.module';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -24,6 +24,7 @@ import {
 })
 export class NavComponent {
   constructor(private menu: MenuService) {}
+  @ViewChild('menuBtn') menuBtn?: ElementRef;
 
   filteredRotes = routes
     .filter((r) => r.path !== '**')
@@ -32,7 +33,7 @@ export class NavComponent {
   createMenu: number[] = new Array(1, 2, 4);
 
   menuData: MenuData = {
-    showMenu: true,
+    showMenu: window.innerWidth <= 650 ? false : true,
     innerWidth: window.innerWidth,
   };
 
@@ -40,6 +41,7 @@ export class NavComponent {
 
   rotate() {
     this.state = this.state === 'default' ? 'rotated' : 'default';
+    this.menuBtn?.nativeElement.classList.toggle('active');
   }
 
   hideMenu = () => (this.menuData.showMenu = !this.menuData.showMenu);
