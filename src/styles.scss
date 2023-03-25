@@ -51,7 +51,7 @@ body {
 
 .menuBtn.active {
     div:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(15px) rotate(45deg);
     }
     div:nth-child(2) {
         opacity: 0;
@@ -76,7 +76,7 @@ body {
     @media screen and (min-width: 1075px) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (min-width: 1650px) {
+    @media screen and (min-width: 1700px) {
         grid-template-columns: repeat(3, 1fr);
     }
 }
