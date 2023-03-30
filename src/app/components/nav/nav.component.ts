@@ -17,8 +17,8 @@ import {
     trigger('rotatedState', [
       state('default', style({ transform: 'rotate(0deg)' })),
       state('rotated', style({ transform: 'rotate(90deg)' })),
-      transition('rotated => default', animate('500ms')),
-      transition('default => rotated', animate('500ms')),
+      transition('rotated => default', animate('2s')),
+      transition('default => rotated', animate('2s')),
     ]),
   ],
 })
@@ -41,7 +41,8 @@ export class NavComponent {
 
   rotate() {
     this.state = this.state === 'default' ? 'rotated' : 'default';
-    this.menuBtn?.nativeElement.classList.toggle('active');
+    const $ = this.menuBtn?.nativeElement.classList;
+    $.toggle('active');
   }
 
   hideMenu = () => (this.menuData.showMenu = !this.menuData.showMenu);

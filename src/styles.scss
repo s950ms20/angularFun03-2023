@@ -39,14 +39,25 @@ body {
     }
 }
 
+.hamburgerMenu {
+    display: inline-block;
+}
+
 .menuBtn {
     display: flex;
     justify-content: right;
-}
-
-.hamburgerMenu {
-    display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.453);
+    div:nth-child(1) {
+        transform: translateY(0px) rotate(0deg);
+        transition: all 2s;
+    }
+    div:nth-child(2) {
+        opacity: 1;
+        transition: all 1s;
+    }
+    div:nth-child(3) {
+        transform: translateY(0px) rotate(0deg);
+        transition: all 2s;
+    }
 }
 
 .menuBtn.active {

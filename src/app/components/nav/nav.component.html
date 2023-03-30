@@ -1,5 +1,5 @@
 <nav class="box">
-    <div class="menuBtn" #menuBtn>
+    <div class="menuBtn " #menuBtn>
         <div *ngIf="menuData.innerWidth < 651" class="hamburgerMenu nav-box" [@rotatedState]="state">
             <div class="menuStripe" *ngFor="let stripe of createMenu" (click)="hideMenu(); rotate()"></div>
         </div>
