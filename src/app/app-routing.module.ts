@@ -1,3 +1,4 @@
+import { GojsComponent } from './components/gojs/gojs.component';
 import { FifthComponent } from './components/fifth/fifth.component';
 import { FourthComponent } from './components/fourth/fourth.component';
 import { ThirdComponent } from './components/third/third.component';
